@@ -18,6 +18,9 @@
         <li class="nav-item"></li>
         <a class="page-scroll nav-link" href="#Contact">CONTACT</a>
       </li>
+      <li>
+        <a class="page-scroll nav-link" href="#Location">LOCATION</a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <button type="button" data-toggle="modal" data-target="#SignInModal" class="btn btn-outline-secondary btn-sm"><i class="fas fa-sign-in-alt"></i> Sign In</button>

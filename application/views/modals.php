@@ -50,14 +50,35 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>ADD FORM HERE</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
-        <button type="button" class="btn btn-success">SAVE</button>
-      </div>
+
+       <form ACTION="insertintoCustomers.php" METHOD="post">
+        <table border="1px">
+          <tr>
+            <td>AMP</td>
+            <td><INPUT type="text" Name="AMP" id="AMP"></td>
+          </tr>
+          <tr>
+            <td>Business Name</td>
+            <td><INPUT type="text" Name="bName" id="bName"></td>
+          </tr>
+          <tr>
+            <td>Street Address</td>
+            <td><INPUT type="text" Name="Addr" id="Addr"></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><INPUT type="text" Name="City" id="City"></td>
+          </tr>
+        </table>
+      </form>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+      <button type="button" class="btn btn-success">SAVE</button>
     </div>
   </div>
+</div>
 </div> <!--DB Customers Add Modal -->
 
 <!--DB Employees Add Modal -->
@@ -122,3 +143,36 @@
     </div>
   </div>
 </div> <!--DB Suppliers Add Modal -->
+
+<!--DB Customers Open Modal -->
+<div class="modal fade" id="openCustomers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AMP</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <?php
+       while($row = mysqli_fetch_assoc($result)){
+        ?>
+        <tr>
+          <th scope="row"><?php echo $row["AMP"];?></th>
+          <td><?php echo $row["bName"];?></td>
+          <td><?php echo $row["Addr"] . " " . $row["City"] . ", " .$row["State"] . " " . $row["Zip"];?></td>
+          <td><?php echo "$" . $row["Total"];?></td>
+        </tr>
+        <?php
+      }
+      ?>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+      <button type="button" class="btn btn-success">SAVE</button>
+    </div>
+  </div>
+</div>
+</div> <!--DB Customers Open Modal -->

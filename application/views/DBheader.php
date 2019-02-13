@@ -6,7 +6,19 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/fontawesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/all.css">
-	<title>PRINTS</title>
+	<style type="text/css">
+		.btn-xl {
+			padding: 10px 20px;
+			font-size: 2.5em;
+			border-radius: 5px;
+			margin-top:10.5rem;
+		}
+
+		.nav-link:hover {
+			color: #fff !important;
+		}
+</style>
+<title>PRINTS</title>
 </head>
 
 <body>
@@ -15,7 +27,7 @@
 			<div class="row">
 				<div class="col-sm-10">
 					<div class="text-left text-dark">
-						<h1 class="font-weight-bold" style="font-size: 5em; margin-top: 10px;">PRINTS<img src="<?php echo base_url();?>images/HeaderLogo.png" style="margin-left: 10px; margin-bottom: 13px; height: 75px;"></h1>
+						<h1 class="font-weight-bold" style="font-size: 5em; margin-top: 10px;">AMPRO PRINTS<img src="<?php echo base_url();?>images/HeaderLogo.png" style="margin-left: 10px; margin-bottom: 13px; height: 75px;"></h1>
 					</div>
 				</div>
 
